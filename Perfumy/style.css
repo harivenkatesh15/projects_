@@ -1,0 +1,38 @@
+nav{ color: white;
+    background-color: black;
+    padding: 20px;
+}
+ul,li,h1{display: inline;}
+ul{margin-left: 70%;
+color: grey;}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+li:hover{
+    color: white;
+    cursor: pointer;
+}
+input{
+    width: 600px;
+    padding: 10px;
+}
+.sb{
+    text-align: center;
+    padding: 50px;
+}
+.box{border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    width: 220px;
+display: inline-block;
+}
+.products{text-align: center;}
+.box:hover{background-color: black;
+color: white;
+cursor: pointer;}
+.last{color:grey}
+#one{
+    margin: 10px;
+    
+}
