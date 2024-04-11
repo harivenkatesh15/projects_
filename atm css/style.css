@@ -1,0 +1,168 @@
+*{
+    margin: 0px;
+
+}
+
+
+
+section{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #121321;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 900px ;
+}
+
+section::before{
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform:translate(-150px,-100px) ;
+    background: linear-gradient(90deg,rgb(227, 126, 227),white);
+}
+
+section::after{
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius:50% ;
+    transform:translate(150px,100px) ;
+    background: linear-gradient(90deg,rgb(227, 126, 227),white);
+}
+.container{
+    position: relative;
+    height: 205px;
+    width: 375px;
+    z-index:100;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+.container .cardf{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.096);
+    box-shadow: 0px 25px 45px ;
+    padding: 20px;
+    
+   
+
+}
+
+
+
+.cardf .logo img{
+        width:58px;
+      height: 58px;
+}
+
+.cardf h4{
+    color: white;
+    font-size: 15px;
+  
+}
+.cardf h3{
+    color: white;
+    font-weight: lighter;
+}
+
+.cardf img{
+    width:58px;
+    height: 38px;
+}
+.cardf header,.cardf .logo, .cardf img
+{
+    display: flex;
+   align-items: center;
+    
+}
+.cardf header{
+    justify-content: space-between;
+}
+
+.cardf .card-details{
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.number{
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 3px;
+}
+
+.name{
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+.cardb{
+    
+    height: 100%;
+    width:100%;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.096);
+    box-shadow: 0px 25px 45px ;
+    padding: 20px;
+    color:white;
+    padding: 15px 25px 25px 25px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.container:hover{
+    transform: rotateY(180deg);
+}
+.cardb h4{
+    font-size: 11px;
+}
+.cardb .magnetic-strip{
+     position: absolute;
+     height: 40px;
+     width: 100%;
+     background: black;
+     top:40px;
+     left: 0;
+}
+ .cardb .signature{
+    margin-top: 80px;
+    height:45px;
+    width: 85%;
+    border-radius: 6px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: repeating-linear-gradient(
+        lightgrey,
+        white 3px,
+        lightgrey 0px,
+        white 9px
+    );
+ }
+
+ .signature i{
+    color: black;
+    font-size: 12px;
+    margin-right:-28px ;
+    padding: 4px 6px;
+    background-color:white ;
+    border-radius: 4px;
+    z-index: -1;
+ }
+
+ .cardb h3{
+    font-size: 10px;
+    margin-top: 20px;
+
+ }
+ 

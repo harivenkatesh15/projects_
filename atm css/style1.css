@@ -1,0 +1,24 @@
+.outerbox{
+    height: 300px;
+    width: 500px;
+    background-color: blue;
+    top:200px;
+    left:100px;
+    margin-left: 200px;
+    margin-top: 200px;
+    z-index: -1;
+   
+    
+    
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+   
+    top:150px;
+    left:250px;
+    position: relative;
+    border-radius: 50%;
+
+}
