@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="todo">
+    <button onclick="add()">Add</button>
+    <ul id="to">
+        <li>Hello
+            <button onclick="del()">Del</button>
+        </li>
+        
+    </ul>
+    <script>
+
+        var a=document.getElementById("todo")
+        var ul=document.getElementById("to")
+        function add() {
+            var l=document.createElement("li")
+            l.innerHTML=a.value+"<button onclick='del(event)'>Del</button>"
+            ul.append(l)
+        }
+        function del(){
+              event.target.parentElement.remove()
+        }
+    </script>
+</body>
+</html>

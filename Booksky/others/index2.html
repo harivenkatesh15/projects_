@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td,th{
+            border:1px solid black;
+        } 
+        
+    </style>
+</head>
+<body>
+    <table>
+    <form>
+        <tr>
+            <th><label for="name">Name</label></th>
+            <td><input type="text" id="name"></td></td>  
+        </tr>
+        <tr>
+            <th><label for="num">Age</label></th>
+            <td><input type="number" id="num"></td></td>  
+        </tr>
+        <tr>
+            <th><label for="gen">Gender</label></th>
+            <td>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gend">
+                <label for="female">FeMale</label>
+                <input type="radio" id="female" name="gend"></td>    
+        </tr>
+        <tr>
+            <th><label for="course">Course</label></th>
+            <td><select>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>Javascript</option>
+            </select></td>
+        </tr>
+        <tr >
+            <th><label for="mail">E-mail</label></th>
+            <td><input type="email" id="mail"></td></td>  
+        </tr>
+        <tr >
+           <td id="save"><button onclick="add()">Save</button></td> 
+        </tr>
+        
+        
+    </form>
+</table><br>
+<table border="4" id="show">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+</table>
+</center>
+
+<script>
+
+var list1 = [];
+var list2 = [];
+var list3 = [];
+
+
+var n = 1;
+var x = 0;
+
+function AddRow(){
+
+    var AddRown = document.getElementById('data');
+    var NewRow = AddRown.insertRow(n);
+
+    list1[x] = document.getElementById("name").value;
+    list2[x] = document.getElementById("num").value;
+  
+    list3[x] = document.getElementById("email").value;
+    
+
+    var cel1 = NewRow.insertCell(0);
+    var cel2 = NewRow.insertCell(1);
+    var cel3 = NewRow.insertCell(2);
+   
+
+    cel1.innerHTML = list1[x];
+    cel2.innerHTML = list2[x];
+    cel3.innerHTML = list3[x];
+   
+
+    n++;
+    x++;
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            position: absolute;
+            height: 100%;
+            width:100%;
+            background-color: black;
+            top:0;
+            left: 0;
+            opacity: 0.8;
+            display: none;
+        }
+        .box2{
+            position: absolute;
+            height: 200px;
+            width: 30%;
+            left:30%;
+            background-color: bisque;
+            z-index: 3;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="bt">Click</button>
+    <div class="box1"></div>
+    <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusamus non totam, autem ullam, qui aliquid provident error harum odit sequi. Nobis esse blanditiis ipsa modi fugiat non porro vero eius eligendi reiciendis? Magni veniam tempora neque unde, eaque est! Consectetur atque fugit dolorem modi! Asperiores praesentium aliquid cum cupiditate!
+        <button id="close">close</button>
+    </div>
+    <script>
+        bo=document.querySelector(".box1")
+        box=document.querySelector(".box2")
+        b=document.getElementById("bt")
+        c=document.getElementById("close")
+        b.addEventListener("click",function(){
+
+            bo.style.display="block"
+            box.style.display="block"
+        })
+        c.addEventListener("click",function(){
+
+bo.style.display="none"
+box.style.display="none"
+})
+    </script>
+</body>
+</html>
