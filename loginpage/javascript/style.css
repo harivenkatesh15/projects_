@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.box{
+    background-color: antiquewhite;
+    padding: 30px;
+   text-align: center;
+
+    
+}
+#c-f{
+    margin-top: 10px;
+}
+#f-c{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

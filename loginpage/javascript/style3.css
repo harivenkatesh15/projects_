@@ -1,0 +1,34 @@
+body{
+
+    background-color: brown;
+}
+.layout{
+    
+    background-color: brown;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 10vh 80vh 10vh;
+    text-align: center;
+    gap: 5px;
+    
+
+
+}
+.layout div{
+    background-color: bisque;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    
+}
+#box{
+    border: 1px solid black;
+}
+.header{
+    grid-column: span 3;
+}
+.foot{
+    grid-column: span 3;
+}
