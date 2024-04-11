@@ -1,0 +1,91 @@
+body{
+    background-color: black;
+    color: #fff;
+    margin: 0;
+
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+header{
+    width:1140px;
+    max-width: 80%;
+    margin: auto;
+    height:50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index:100;
+}
+header a{
+    margin-right: 40px;
+}
+.allimg{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -50px;
+
+}
+
+.allimg .list .item{
+    position: absolute;
+    inset:0 0 0 0;
+}
+
+.allimg .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.allimg .list .item .content{
+    position: absolute;
+    top:20%;
+    width:1140px;
+    max-width: 80%;
+    left:50%;
+    transform: translate(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow:0 5px 10px #004 ;
+
+
+}
+
+.allimg .list .item .content .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.allimg .list .item .content .topic,
+.allimg .list .item .content .title{
+    font-weight: bold;
+    font-size: 5em;
+    line-height: 1.3em;
+}
+.allimg .list .item .content .topic{
+    color: #f1683a;
+}
+.allimg .list .item .content .buttons{
+    display: grid;
+    grid-template-columns: repeat(2,130px);
+    grid-template-rows: 40px;
+    gap:5px;
+    margin-top: 20px;
+}
+.allimg .list .item .content button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+.allimg .list .item .content button:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    border: 1px solid #eee;
+}
