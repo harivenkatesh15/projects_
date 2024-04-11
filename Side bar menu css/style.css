@@ -1,0 +1,126 @@
+
+a{
+    text-decoration: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: url(white_brown_dog_is_walking_on_snow_in_snow_field_in_blur_background_hd_dog.jpg) right no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+}
+header
+{
+    position: fixed;
+    width:100%;
+    top:0;
+    left: 0;
+    padding: 1.3rem 10%;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100;
+
+}
+header::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+   background: rgba(0,0,0,.1);
+    backdrop-filter:blur(50px) ;
+    z-index: -1;
+}
+header::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:-100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent,rgba(255,255,255,.4),transparent);
+    transition: .5s;
+
+}
+header:hover::after{
+    left:100%;
+}
+
+
+header a{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+ }
+nav a{
+    margin-right: 1.5rem;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 500;
+}
+#check{
+    display: none;
+}
+#check:checked~.icons #menu{
+    display: none;
+}
+#check:checked~.icons #close{
+    display: block;
+}
+.icons{
+    font-size: 2.2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 5%;
+}
+
+@media (max-width: 992px)
+{
+    header{
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 992px)
+{
+    .icons{
+        display: inline-flex;
+    }
+    nav{
+        position: absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        height: 0;
+        background: rgba(0,0,0,-1);
+        backdrop-filter:blur(50px) ;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        transition: .3s ease;
+        overflow: hidden;
+      
+    }
+    nav a{
+        display: block;
+        margin: 1.5rem 0;
+        text-align: center;
+       
+    }
+    .icons #close{
+        display: none;
+    }
+    #check:checked~ nav{
+        height: 17.3rem;
+    }
+
+}
+

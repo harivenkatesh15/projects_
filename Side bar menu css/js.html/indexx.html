@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*div{
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+            transition: 3s;
+        }
+        .size{
+            height: 400px;
+            width: 400px;
+            background-color: blue;
+        }*/
+        .new{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   <h1>Welcome to Guess Game</h1>
+   <input id="box1">
+   <button onclick="change()">Check</button>
+   <p id="result">Result</p>
+   <p id="score">Score:10</p>
+  
+   <input id="boxy" onkeyup="t()">
+   <h1 id="texty"></h1>
+   <button onclick="h()" id="color">Add</button>
+   <div id="he"></div>
+   
+   <h1 id="name">Name</h1>
+   <button onclick="ce(event)" id="na">Hari</button>
+   <button onclick="ce(event)" id="na">John</button>
+   <button onclick="ce(event)" id="na">Sukkhi</button>
+
+   <h2 onclick="del(event)" id="nums">one</h2>
+   <h2 onclick="del(event)" id="nums">Two</h2>
+   <h2 onclick="del(event)" id="nums">Three</h2>
+   <h2 onclick="del(event)" id="nums">Four</h2>
+   <h2 onclick="del(event)" id="nums">Five</h2>
+   <h2 onclick="del(event)" id="nums">Six</h2>
+   
+   
+    
+    <script>
+        var b1=document.getElementById("box1")
+        var b2=document.getElementById("result")
+        var r=document.getElementById("score")
+        var s=10
+        var b=Math.floor(Math.random()*10)+1
+        
+        function change(){
+
+              var a=Number(b1.value)
+              if(a==b){
+                   b2.textContent="you are correct"
+                   alert("you won")
+              }
+              else{
+                   
+                   b2.textContent="you are wrong"
+                   --s
+                   r.textContent="score:"+s
+              }
+            
+              
+            
+              
+
+        }
+        /*c=document.getElementById("box")
+        function ch(){
+            c.setAttribute("class","size")}*/
+        
+        
+        var d=document.getElementById("boxy")
+        var e=document.getElementById("texty")
+        function t(){
+            e.textContent=d.value
+        }
+
+        var di=document.getElementById("he")
+        var i=document.getElementById("color")
+        function h(){
+            var k=document.createElement("h1")
+            k.textContent="Hello"
+            di.append(k)
+            i.style.backgroundColor='red'
+        }
+
+        
+      
+        function ce(){
+            
+        var na=document.getElementById("name")
+            var ha=document.getElementById("na")
+            na.textContent=event.target.textContent
+        }
+
+        function del(event){
+            
+      
+            event.target.remove()
+        }
+
+    </script>
+</body>
+</html>
